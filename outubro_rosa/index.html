@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outubro Rosa - Site Completo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .pagina {
+            display: none;
+        }
+        .pagina.ativa {
+            display: block;
+        }
+        nav ul li a {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎀 Outubro Rosa 🎀</h1>
+        <p id="subtitulo">Juntos na luta contra o câncer de mama</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a onclick="mostrarPagina('inicial')">Página Inicial</a></li>
+            <li><a onclick="mostrarPagina('informacoes')">Informações</a></li>
+            <li><a onclick="mostrarPagina('prevencao')">Prevenção</a></li>
+        </ul>
+    </nav>
+
+    <!-- PÁGINA INICIAL -->
+    <div id="inicial" class="pagina ativa">
+        <div class="container">
+            <div class="hero">
+                <h2>Bem-vindo à Campanha Outubro Rosa</h2>
+                <p>Um movimento internacional de conscientização para o controle do câncer de mama</p>
+            </div>
+
+            <div class="content-section">
+                <h2>O que é o Outubro Rosa?</h2>
+                <p>
+                    O Outubro Rosa é uma campanha de conscientização realizada mundialmente no mês de outubro, 
+                    dirigida à sociedade e às mulheres sobre a importância da prevenção e do diagnóstico precoce 
+                    do câncer de mama e, mais recentemente, sobre o câncer de colo do útero.
+                </p>
+                <p>
+                    O movimento surgiu na década de 1990, nos Estados Unidos, onde vários Estados realizavam 
+                    ações isoladas referentes ao câncer de mama e ou mamografia no mês de outubro. Posteriormente, 
+                    com a aprovação do Congresso Americano, o mês de outubro se tornou o mês nacional da prevenção 
+                    do câncer de mama.
+                </p>
+            </div>
+
+            <div class="simbolo">
+                🎀
+            </div>
+
+            <div class="content-section">
+                <h2>A Importância da Campanha</h2>
+                <p>
+                    O câncer de mama é o tipo de câncer mais comum entre as mulheres no mundo e no Brasil, 
+                    depois do câncer de pele não melanoma. O Outubro Rosa tem como objetivo principal alertar 
+                    as mulheres e a sociedade sobre a importância da prevenção e do diagnóstico precoce do 
+                    câncer de mama e mais recentemente sobre o câncer de colo do útero.
+                </p>
+                
+                <div class="destaque">
+                    <p><strong>Dados importantes:</strong></p>
+                    <ul>
+                        <li>O câncer de mama é o mais incidente em mulheres no Brasil</li>
+                        <li>Quando identificado cedo tem até 95% de chance de cura</li>
+                        <li>A mamografia é o principal exame de rastreamento</li>
+                        <li>O autoexame é importante para conhecimento do próprio corpo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Como Participar</h2>
+                <p>
+                    Você pode participar da campanha de diversas formas:
+                </p>
+                <ul>
+                    <li>Compartilhando informações sobre prevenção e diagnóstico precoce</li>
+                    <li>Usando o laço rosa como símbolo de apoio</li>
+                    <li>Incentivando mulheres a realizarem os exames preventivos</li>
+                    <li>Participando de eventos e campanhas locais</li>
+                    <li>Apoiando instituições que trabalham na causa</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA INFORMAÇÕES -->
+    <div id="informacoes" class="pagina">
+        <div class="container">
+            <div class="hero">
+                <h2>Informações sobre o Câncer de Mama</h2>
+                <p>Conhecimento é poder na luta contra o câncer</p>
+            </div>
+
+            <div class="content-section">
+                <h2>O que é o Câncer de Mama?</h2>
+                <p>
+                    O câncer de mama é uma doença resultante da multiplicação de células anormais da mama, 
+                    que forma um tumor com potencial de invadir outros órgãos. Há vários tipos de câncer 
+                    de mama. Alguns tipos têm desenvolvimento rápido, enquanto outros crescem lentamente.
+                </p>
+                <p>
+                    A maioria dos casos tem boa resposta ao tratamento, principalmente quando diagnosticado 
+                    e tratado no início. As taxas de cura chegam a até 95% quando detectado precocemente.
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>Sinais e Sintomas</h2>
+                <p>Os principais sinais e sintomas do câncer de mama são:</p>
+                <ul>
+                    <li>Caroço (nódulo) fixo, endurecido e geralmente indolor</li>
+                    <li>Alterações no bico do peito (mamilo)</li>
+                    <li>Pequenos nódulos na região embaixo dos braços (axilas) ou no pescoço</li>
+                    <li>Saída espontânea de líquido dos mamilos</li>
+                    <li>Pele da mama avermelhada, retraída ou parecida com casca de laranja</li>
+                    <li>Alterações no tamanho ou forma da mama</li>
+                </ul>
+                
+                <div class="destaque">
+                    <p><strong>Importante:</strong> Esses sinais e sintomas devem sempre ser investigados por um médico, 
+                    mas podem não ser câncer de mama. A presença de um ou mais desses sintomas não significa que 
+                    você tem câncer.</p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Fatores de Risco</h2>
+                <p>
+                    O câncer de mama não tem uma causa única. Diversos fatores estão relacionados ao aumento 
+                    do risco de desenvolver a doença:
+                </p>
+                
+                <h3>Fatores que não podem ser modificados:</h3>
+                <ul>
+                    <li>Ser mulher</li>
+                    <li>Idade avançada (principalmente acima de 50 anos)</li>
+                    <li>História familiar de câncer de mama</li>
+                    <li>Alterações genéticas (mutações nos genes BRCA1 e BRCA2)</li>
+                    <li>Menstruação precoce (antes dos 12 anos)</li>
+                    <li>Menopausa tardia (após os 55 anos)</li>
+                </ul>
+
+                <h3>Fatores relacionados ao estilo de vida:</h3>
+                <ul>
+                    <li>Obesidade e sobrepeso após a menopausa</li>
+                    <li>Sedentarismo (não praticar atividades físicas)</li>
+                    <li>Consumo de bebida alcoólica</li>
+                    <li>Exposição frequente a radiações ionizantes</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Tratamento</h2>
+                <p>
+                    O tratamento do câncer de mama é feito por meio de uma ou várias modalidades combinadas, 
+                    dependendo do tipo de tumor e do estágio da doença:
+                </p>
+                <ul>
+                    <li><strong>Cirurgia:</strong> Remoção do tumor ou da mama</li>
+                    <li><strong>Radioterapia:</strong> Uso de radiação para destruir células cancerosas</li>
+                    <li><strong>Quimioterapia:</strong> Uso de medicamentos para destruir células cancerosas</li>
+                    <li><strong>Hormonioterapia:</strong> Uso de medicamentos que bloqueiam hormônios</li>
+                    <li><strong>Terapia-alvo:</strong> Medicamentos específicos para cada tipo de tumor</li>
+                </ul>
+                
+                <div class="destaque">
+                    <p><strong>Lembre-se:</strong> O diagnóstico precoce aumenta significativamente as chances 
+                    de cura. Quanto mais cedo o câncer for descoberto, maiores são as possibilidades de tratamento 
+                    e cura.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA PREVENÇÃO -->
+    <div id="prevencao" class="pagina">
+        <div class="container">
+            <div class="hero">
+                <h2>Prevenção e Diagnóstico Precoce</h2>
+                <p>Pequenas atitudes podem salvar vidas</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Como Prevenir o Câncer de Mama</h2>
+                <p>
+                    Cerca de 30% dos casos de câncer de mama podem ser evitados com a adoção de hábitos 
+                    saudáveis. A prevenção primária do câncer de mama está relacionada ao controle dos 
+                    fatores de risco comportamentais.
+                </p>
+                
+                <h3>Hábitos Saudáveis:</h3>
+                <ul>
+                    <li>Praticar atividade física regularmente</li>
+                    <li>Manter o peso corporal adequado</li>
+                    <li>Evitar o consumo de bebidas alcoólicas</li>
+                    <li>Ter uma alimentação saudável</li>
+                    <li>Amamentar (o aleitamento materno protege contra o câncer de mama)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Exames de Detecção Precoce</h2>
+                
+                <h3>Mamografia</h3>
+                <p>
+                    A mamografia é o exame de rastreamento do câncer de mama mais recomendado. É um exame 
+                    de imagem que utiliza raios-X para visualizar a mama internamente e detectar alterações 
+                    suspeitas.
+                </p>
+                
+                <div class="destaque">
+                    <p><strong>Recomendações:</strong></p>
+                    <ul>
+                        <li>Mulheres de 50 a 69 anos devem fazer mamografia a cada dois anos</li>
+                        <li>Mulheres com risco elevado podem precisar começar antes</li>
+                        <li>Consulte sempre seu médico para orientações personalizadas</li>
+                    </ul>
+                </div>
+
+                <h3>Exame Clínico das Mamas</h3>
+                <p>
+                    É o exame das mamas realizado por médico ou enfermeiro treinado. Nesse exame, são 
+                    observados e apalpados as mamas e as axilas. Recomenda-se que seja feito anualmente 
+                    a partir dos 40 anos.
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>Autoconhecimento das Mamas</h2>
+                <p>
+                    O autoexame das mamas não substitui os exames de rotina (mamografia e exame clínico), 
+                    mas é importante que toda mulher conheça bem o próprio corpo para identificar qualquer 
+                    alteração suspeita.
+                </p>
+                
+                <h3>Como fazer o autoexame:</h3>
+                <ul>
+                    <li><strong>No espelho:</strong> De pé, observe suas mamas com os braços ao longo do corpo, 
+                    depois com os braços levantados acima da cabeça. Procure alterações no contorno, inchaços 
+                    ou retrações na pele.</li>
+                    
+                    <li><strong>No banho:</strong> Com as mãos ensaboadas, deslize os dedos suavemente sobre 
+                    toda a superfície das mamas e axilas, fazendo movimentos circulares. Procure por nódulos 
+                    ou espessamentos.</li>
+                    
+                    <li><strong>Deitada:</strong> Coloque a mão direita atrás da cabeça e com a mão esquerda 
+                    examine a mama direita, fazendo movimentos circulares. Repita o processo para a mama esquerda.</li>
+                </ul>
+
+                <div class="destaque">
+                    <p><strong>Atenção:</strong> Se você notar qualquer alteração, procure um médico imediatamente. 
+                    Nem todas as alterações significam câncer, mas é importante investigar.</p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Quando Procurar um Médico</h2>
+                <p>
+                    Procure atendimento médico se você notar:
+                </p>
+                <ul>
+                    <li>Nódulo ou caroço na mama ou axila</li>
+                    <li>Alteração no tamanho ou forma da mama</li>
+                    <li>Mudanças na textura da pele da mama</li>
+                    <li>Vermelhidão ou descamação na mama</li>
+                    <li>Secreção do mamilo</li>
+                    <li>Alteração no mamilo (retração ou inversão)</li>
+                    <li>Dor persistente na mama</li>
+                </ul>
+                
+                <p>
+                    Lembre-se: o diagnóstico precoce aumenta muito as chances de cura. Não tenha medo de 
+                    procurar ajuda médica. Cuidar da saúde é um ato de amor próprio!
+                </p>
+            </div>
+
+            <div class="simbolo">
+                💗
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>Outubro Rosa - Prevenção Salva Vidas</strong></p>
+        <p>Compartilhe esta causa | Cuide-se | Faça seus exames</p>
+        <p>&copy; 2024 - Campanha de Conscientização</p>
+    </footer>
+
+    <script>
+        const subtitulos = {
+            'inicial': 'Juntos na luta contra o câncer de mama',
+            'informacoes': 'Informação é o primeiro passo para a prevenção',
+            'prevencao': 'Prevenir é cuidar da vida'
+        };
+
+        function mostrarPagina(nomePagina) {
+            // Esconde todas as páginas
+            const paginas = document.querySelectorAll('.pagina');
+            paginas.forEach(p => p.classList.remove('ativa'));
+            
+            // Mostra a página selecionada
+            document.getElementById(nomePagina).classList.add('ativa');
+            
+            // Atualiza o subtítulo
+            document.getElementById('subtitulo').textContent = subtitulos[nomePagina];
+            
+            // Rola para o topo
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
