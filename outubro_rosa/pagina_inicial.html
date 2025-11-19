@@ -1,89 +1,232 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outubro Rosa - Página Inicial</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Outubro Rosa - Página Inicial</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    #languageSelector {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 8px 15px;
+      border: 2px solid white;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    #languageSelector option {
+      background-color: #ff69b4;
+      color: white;
+    }
+
+    header {
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      #languageSelector {
+        position: static;
+        margin: 10px auto;
+        display: block;
+        width: 150px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>🎀 Outubro Rosa 🎀</h1>
-        <p>Juntos na luta contra o câncer de mama</p>
-    </header>
+  <header>
+    <select id="languageSelector">
+      <option value="pt">Português 🇧🇷</option>
+      <option value="en">English 🇺🇸</option>
+    </select>
+    <h1 id="headerTitle">🎀 Outubro Rosa 🎀</h1>
+    <p id="headerSubtitle">Juntos na luta contra o câncer de mama</p>
+  </header>
 
-    <nav>
-        <ul>
-            <li><a href="pagina_inicial.html">Página Inicial</a></li>
-            <li><a href="informacoes.html">Informações</a></li>
-            <li><a href="prevencao.html">Prevenção</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="pagina_inicial.html" id="navHome">Página Inicial</a></li>
+      <li><a href="informacoes.html" id="navInfo">Informações</a></li>
+      <li><a href="prevencao.html" id="navPrev">Prevenção</a></li>
+    </ul>
+  </nav>
 
-    <div class="container">
-        <div class="hero">
-            <h2>Bem-vindo à Campanha Outubro Rosa</h2>
-            <p>Um movimento internacional de conscientização para o controle do câncer de mama</p>
-        </div>
-
-        <div class="content-section">
-            <h2>O que é o Outubro Rosa?</h2>
-            <p>
-                O Outubro Rosa é uma campanha de conscientização realizada mundialmente no mês de outubro, 
-                dirigida à sociedade e às mulheres sobre a importância da prevenção e do diagnóstico precoce 
-                do câncer de mama e, mais recentemente, sobre o câncer de colo do útero.
-            </p>
-            <p>
-                O movimento surgiu na década de 1990, nos Estados Unidos, onde vários Estados realizavam 
-                ações isoladas referentes ao câncer de mama e ou mamografia no mês de outubro. Posteriormente, 
-                com a aprovação do Congresso Americano, o mês de outubro se tornou o mês nacional da prevenção 
-                do câncer de mama.
-            </p>
-        </div>
-
-        <div class="simbolo">
-            🎀
-        </div>
-
-        <div class="content-section">
-            <h2>A Importância da Campanha</h2>
-            <p>
-                O câncer de mama é o tipo de câncer mais comum entre as mulheres no mundo e no Brasil, 
-                depois do câncer de pele não melanoma. O Outubro Rosa tem como objetivo principal alertar 
-                as mulheres e a sociedade sobre a importância da prevenção e do diagnóstico precoce do 
-                câncer de mama e mais recentemente sobre o câncer de colo do útero.
-            </p>
-            
-            <div class="destaque">
-                <p><strong>Dados importantes:</strong></p>
-                <ul>
-                    <li>O câncer de mama é o mais incidente em mulheres no Brasil</li>
-                    <li>Quando identificado cedo tem até 95% de chance de cura</li>
-                    <li>A mamografia é o principal exame de rastreamento</li>
-                    <li>O autoexame é importante para conhecimento do próprio corpo</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h2>Como Participar</h2>
-            <p>
-                Você pode participar da campanha de diversas formas:
-            </p>
-            <ul>
-                <li>Compartilhando informações sobre prevenção e diagnóstico precoce</li>
-                <li>Usando o laço rosa como símbolo de apoio</li>
-                <li>Incentivando mulheres a realizarem os exames preventivos</li>
-                <li>Participando de eventos e campanhas locais</li>
-                <li>Apoiando instituições que trabalham na causa</li>
-            </ul>
-        </div>
+  <div class="container">
+    <div class="hero">
+      <h2 id="heroTitle">Bem-vindo à Campanha Outubro Rosa</h2>
+      <p id="heroText">Um movimento internacional de conscientização para o controle do câncer de mama</p>
     </div>
 
-    <footer>
-        <p><strong>Outubro Rosa - Prevenção Salva Vidas</strong></p>
-        <p>Compartilhe esta causa | Cuide-se | Faça seus exames</p>
-        <p>&copy; 2024 - Campanha de Conscientização</p>
-    </footer>
+    <div class="content-section">
+      <h2 id="section1Title">O que é o Outubro Rosa?</h2>
+      <p id="section1Text1">
+        O Outubro Rosa é uma campanha de conscientização realizada mundialmente no mês de outubro,
+        dirigida à sociedade e às mulheres sobre a importância da prevenção e do diagnóstico precoce
+        do câncer de mama e, mais recentemente, sobre o câncer de colo do útero.
+      </p>
+      <p id="section1Text2">
+        O movimento surgiu na década de 1990, nos Estados Unidos, onde vários Estados realizavam
+        ações isoladas referentes ao câncer de mama e ou mamografia no mês de outubro. Posteriormente,
+        com a aprovação do Congresso Americano, o mês de outubro se tornou o mês nacional da prevenção
+        do câncer de mama.
+      </p>
+    </div>
+
+    <div class="simbolo">🎀</div>
+
+    <div class="content-section">
+      <h2 id="section2Title">A Importância da Campanha</h2>
+      <p id="section2Text">
+        O câncer de mama é o tipo de câncer mais comum entre as mulheres no mundo e no Brasil,
+        depois do câncer de pele não melanoma. O Outubro Rosa tem como objetivo principal alertar
+        as mulheres e a sociedade sobre a importância da prevenção e do diagnóstico precoce do
+        câncer de mama e mais recentemente sobre o câncer de colo do útero.
+      </p>
+
+      <div class="destaque">
+        <p><strong id="dataTitle">Dados importantes:</strong></p>
+        <ul>
+          <li id="data1">O câncer de mama é o mais incidente em mulheres no Brasil</li>
+          <li id="data2">Quando identificado cedo tem até 95% de chance de cura</li>
+          <li id="data3">A mamografia é o principal exame de rastreamento</li>
+          <li id="data4">O autoexame é importante para conhecimento do próprio corpo</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h2 id="section3Title">Como Participar</h2>
+      <p id="section3Text">Você pode participar da campanha de diversas formas:</p>
+      <ul>
+        <li id="partic1">Compartilhando informações sobre prevenção e diagnóstico precoce</li>
+        <li id="partic2">Usando o laço rosa como símbolo de apoio</li>
+        <li id="partic3">Incentivando mulheres a realizarem os exames preventivos</li>
+        <li id="partic4">Participando de eventos e campanhas locais</li>
+        <li id="partic5">Apoiando instituições que trabalham na causa</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p><strong id="footerTitle">Outubro Rosa - Prevenção Salva Vidas</strong></p>
+    <p id="footerText">Compartilhe esta causa | Cuide-se | Faça seus exames</p>
+    <p id="footerCopy">&copy; 2024 - Campanha de Conscientização</p>
+  </footer>
+
+  <script>
+    const translations = {
+      pt: {
+        pageTitle: "Outubro Rosa - Página Inicial",
+        headerTitle: "🎀 Outubro Rosa 🎀",
+        headerSubtitle: "Juntos na luta contra o câncer de mama",
+        navHome: "Página Inicial",
+        navInfo: "Informações",
+        navPrev: "Prevenção",
+        heroTitle: "Bem-vindo à Campanha Outubro Rosa",
+        heroText: "Um movimento internacional de conscientização para o controle do câncer de mama",
+        section1Title: "O que é o Outubro Rosa?",
+        section1Text1: "O Outubro Rosa é uma campanha de conscientização realizada mundialmente no mês de outubro, dirigida à sociedade e às mulheres sobre a importância da prevenção e do diagnóstico precoce do câncer de mama e, mais recentemente, sobre o câncer de colo do útero.",
+        section1Text2: "O movimento surgiu na década de 1990, nos Estados Unidos, onde vários Estados realizavam ações isoladas referentes ao câncer de mama e ou mamografia no mês de outubro. Posteriormente, com a aprovação do Congresso Americano, o mês de outubro se tornou o mês nacional da prevenção do câncer de mama.",
+        section2Title: "A Importância da Campanha",
+        section2Text: "O câncer de mama é o tipo de câncer mais comum entre as mulheres no mundo e no Brasil, depois do câncer de pele não melanoma. O Outubro Rosa tem como objetivo principal alertar as mulheres e a sociedade sobre a importância da prevenção e do diagnóstico precoce do câncer de mama e mais recentemente sobre o câncer de colo do útero.",
+        dataTitle: "Dados importantes:",
+        data1: "O câncer de mama é o mais incidente em mulheres no Brasil",
+        data2: "Quando identificado cedo tem até 95% de chance de cura",
+        data3: "A mamografia é o principal exame de rastreamento",
+        data4: "O autoexame é importante para conhecimento do próprio corpo",
+        section3Title: "Como Participar",
+        section3Text: "Você pode participar da campanha de diversas formas:",
+        partic1: "Compartilhando informações sobre prevenção e diagnóstico precoce",
+        partic2: "Usando o laço rosa como símbolo de apoio",
+        partic3: "Incentivando mulheres a realizarem os exames preventivos",
+        partic4: "Participando de eventos e campanhas locais",
+        partic5: "Apoiando instituições que trabalham na causa",
+        footerTitle: "Outubro Rosa - Prevenção Salva Vidas",
+        footerText: "Compartilhe esta causa | Cuide-se | Faça seus exames",
+        footerCopy: "© 2024 - Campanha de Conscientização"
+      },
+      en: {
+        pageTitle: "Pink October - Home Page",
+        headerTitle: "🎀 Pink October 🎀",
+        headerSubtitle: "Together in the fight against breast cancer",
+        navHome: "Home",
+        navInfo: "Information",
+        navPrev: "Prevention",
+        heroTitle: "Welcome to the Pink October Campaign",
+        heroText: "An international awareness movement for breast cancer control",
+        section1Title: "What is Pink October?",
+        section1Text1: "Pink October is an awareness campaign held worldwide in the month of October, aimed at society and women about the importance of prevention and early diagnosis of breast cancer and, more recently, cervical cancer.",
+        section1Text2: "The movement emerged in the 1990s in the United States, where several states carried out isolated actions related to breast cancer and mammography in October. Subsequently, with the approval of the American Congress, October became the national month for breast cancer prevention.",
+        section2Title: "The Importance of the Campaign",
+        section2Text: "Breast cancer is the most common type of cancer among women in the world and in Brazil, after non-melanoma skin cancer. Pink October's main objective is to alert women and society about the importance of prevention and early diagnosis of breast cancer and, more recently, cervical cancer.",
+        dataTitle: "Important data:",
+        data1: "Breast cancer is the most incident in women in Brazil",
+        data2: "When identified early it has up to 95% chance of cure",
+        data3: "Mammography is the main screening exam",
+        data4: "Self-examination is important for knowing your own body",
+        section3Title: "How to Participate",
+        section3Text: "You can participate in the campaign in several ways:",
+        partic1: "Sharing information about prevention and early diagnosis",
+        partic2: "Using the pink ribbon as a symbol of support",
+        partic3: "Encouraging women to undergo preventive exams",
+        partic4: "Participating in local events and campaigns",
+        partic5: "Supporting institutions that work for the cause",
+        footerTitle: "Pink October - Prevention Saves Lives",
+        footerText: "Share this cause | Take care | Get your exams",
+        footerCopy: "© 2024 - Awareness Campaign"
+      }
+    };
+
+    function applyTranslations(lang) {
+      const t = translations[lang];
+      document.title = t.pageTitle;
+      document.getElementById("headerTitle").textContent = t.headerTitle;
+      document.getElementById("headerSubtitle").textContent = t.headerSubtitle;
+      document.getElementById("navHome").textContent = t.navHome;
+      document.getElementById("navInfo").textContent = t.navInfo;
+      document.getElementById("navPrev").textContent = t.navPrev;
+      document.getElementById("heroTitle").textContent = t.heroTitle;
+      document.getElementById("heroText").textContent = t.heroText;
+      document.getElementById("section1Title").textContent = t.section1Title;
+      document.getElementById("section1Text1").textContent = t.section1Text1;
+      document.getElementById("section1Text2").textContent = t.section1Text2;
+      document.getElementById("section2Title").textContent = t.section2Title;
+      document.getElementById("section2Text").textContent = t.section2Text;
+      document.getElementById("dataTitle").textContent = t.dataTitle;
+      document.getElementById("data1").textContent = t.data1;
+      document.getElementById("data2").textContent = t.data2;
+      document.getElementById("data3").textContent = t.data3;
+      document.getElementById("data4").textContent = t.data4;
+      document.getElementById("section3Title").textContent = t.section3Title;
+      document.getElementById("section3Text").textContent = t.section3Text;
+      document.getElementById("partic1").textContent = t.partic1;
+      document.getElementById("partic2").textContent = t.partic2;
+      document.getElementById("partic3").textContent = t.partic3;
+      document.getElementById("partic4").textContent = t.partic4;
+      document.getElementById("partic5").textContent = t.partic5;
+      document.getElementById("footerTitle").textContent = t.footerTitle;
+      document.getElementById("footerText").textContent = t.footerText;
+      document.getElementById("footerCopy").textContent = t.footerCopy;
+      
+      // Salvar preferência do idioma
+      localStorage.setItem('language', lang);
+      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+    }
+
+    document.getElementById("languageSelector").addEventListener("change", (e) => {
+      applyTranslations(e.target.value);
+    });
+
+    // Carregar idioma salvo ou usar padrão
+    const savedLang = localStorage.getItem('language') || 'pt';
+    document.getElementById("languageSelector").value = savedLang;
+    applyTranslations(savedLang);
+  </script>
 </body>
 </html>

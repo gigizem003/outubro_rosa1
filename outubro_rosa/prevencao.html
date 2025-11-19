@@ -5,66 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prevenção - Outubro Rosa</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        #languageSelector {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 8px 15px;
+            border: 2px solid white;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        #languageSelector option {
+            background-color: #ff69b4;
+            color: white;
+        }
+
+        header {
+            position: relative;
+        }
+
+        .content-section li {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .content-section li:hover {
+            background-color: #ffe4f1;
+            color: #ff1493;
+            font-weight: bold;
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 768px) {
+            #languageSelector {
+                position: static;
+                margin: 10px auto;
+                display: block;
+                width: 150px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>🎀 Outubro Rosa 🎀</h1>
-        <p>Prevenir é cuidar da vida</p>
+        <select id="languageSelector">
+            <option value="pt">Português 🇧🇷</option>
+            <option value="en">English 🇺🇸</option>
+        </select>
+        <h1 id="headerTitle">🎀 Outubro Rosa 🎀</h1>
+        <p id="headerSubtitle">Prevenir é cuidar da vida</p>
     </header>
 
     <nav>
         <ul>
-            <li><a href="pagina_inicial.html">Página Inicial</a></li>
-            <li><a href="informacoes.html">Informações</a></li>
-            <li><a href="prevencao.html">Prevenção</a></li>
+            <li><a href="pagina_inicial.html" id="navHome">Página Inicial</a></li>
+            <li><a href="informacoes.html" id="navInfo">Informações</a></li>
+            <li><a href="prevencao.html" id="navPrev">Prevenção</a></li>
         </ul>
     </nav>
 
     <div class="container">
         <div class="hero">
-            <h2>Prevenção e Diagnóstico Precoce</h2>
-            <p>Pequenas atitudes podem salvar vidas</p>
+            <h2 id="heroTitle">Prevenção e Diagnóstico Precoce</h2>
+            <p id="heroText">Pequenas atitudes podem salvar vidas</p>
         </div>
 
         <div class="content-section">
-            <h2>Como Prevenir o Câncer de Mama</h2>
-            <p>
+            <h2 id="section1Title">Como Prevenir o Câncer de Mama</h2>
+            <p id="section1Text">
                 Cerca de 30% dos casos de câncer de mama podem ser evitados com a adoção de hábitos 
                 saudáveis. A prevenção primária do câncer de mama está relacionada ao controle dos 
                 fatores de risco comportamentais.
             </p>
             
-            <h3>Hábitos Saudáveis:</h3>
+            <h3 id="habitosTitle">Hábitos Saudáveis:</h3>
+            <p><em id="clickInfo">Clique em qualquer item abaixo para compartilhar via WhatsApp:</em></p>
             <ul>
-                <li>Praticar atividade física regularmente</li>
-                <li>Manter o peso corporal adequado</li>
-                <li>Evitar o consumo de bebidas alcoólicas</li>
-                <li>Ter uma alimentação saudável</li>
-                <li>Amamentar (o aleitamento materno protege contra o câncer de mama)</li>
+                <li data-topic="atividade-fisica" id="habito1">Praticar atividade física regularmente</li>
+                <li data-topic="peso" id="habito2">Manter o peso corporal adequado</li>
+                <li data-topic="alcool" id="habito3">Evitar o consumo de bebidas alcoólicas</li>
+                <li data-topic="alimentacao" id="habito4">Ter uma alimentação saudável</li>
+                <li data-topic="amamentacao" id="habito5">Amamentar (o aleitamento materno protege contra o câncer de mama)</li>
             </ul>
         </div>
 
         <div class="content-section">
-            <h2>Exames de Detecção Precoce</h2>
+            <h2 id="section2Title">Exames de Detecção Precoce</h2>
             
-            <h3>Mamografia</h3>
-            <p>
+            <h3 id="mamoTitle">Mamografia</h3>
+            <p id="mamoText">
                 A mamografia é o exame de rastreamento do câncer de mama mais recomendado. É um exame 
                 de imagem que utiliza raios-X para visualizar a mama internamente e detectar alterações 
                 suspeitas.
             </p>
             
             <div class="destaque">
-                <p><strong>Recomendações:</strong></p>
+                <p><strong id="recomendacoesTitle">Recomendações:</strong></p>
+                <p><em id="clickInfo2">Clique para compartilhar:</em></p>
                 <ul>
-                    <li>Mulheres de 50 a 69 anos devem fazer mamografia a cada dois anos</li>
-                    <li>Mulheres com risco elevado podem precisar começar antes</li>
-                    <li>Consulte sempre seu médico para orientações personalizadas</li>
+                    <li data-topic="mamografia-50-69" id="rec1">Mulheres de 50 a 69 anos devem fazer mamografia a cada dois anos</li>
+                    <li data-topic="risco-elevado" id="rec2">Mulheres com risco elevado podem precisar começar antes</li>
+                    <li data-topic="consulta-medico" id="rec3">Consulte sempre seu médico para orientações personalizadas</li>
                 </ul>
             </div>
 
-            <h3>Exame Clínico das Mamas</h3>
-            <p>
+            <h3 id="exameTitle">Exame Clínico das Mamas</h3>
+            <p id="exameText">
                 É o exame das mamas realizado por médico ou enfermeiro treinado. Nesse exame, são 
                 observados e apalpados as mamas e as axilas. Recomenda-se que seja feito anualmente 
                 a partir dos 40 anos.
@@ -72,63 +125,225 @@
         </div>
 
         <div class="content-section">
-            <h2>Autoconhecimento das Mamas</h2>
-            <p>
+            <h2 id="section3Title">Autoconhecimento das Mamas</h2>
+            <p id="section3Text">
                 O autoexame das mamas não substitui os exames de rotina (mamografia e exame clínico), 
                 mas é importante que toda mulher conheça bem o próprio corpo para identificar qualquer 
                 alteração suspeita.
             </p>
             
-            <h3>Como fazer o autoexame:</h3>
+            <h3 id="comoFazerTitle">Como fazer o autoexame:</h3>
+            <p><em id="clickInfo3">Clique para saber mais:</em></p>
             <ul>
-                <li><strong>No espelho:</strong> De pé, observe suas mamas com os braços ao longo do corpo, 
+                <li data-topic="autoexame-espelho"><strong id="espelho">No espelho:</strong> <span id="espelhoText">De pé, observe suas mamas com os braços ao longo do corpo, 
                 depois com os braços levantados acima da cabeça. Procure alterações no contorno, inchaços 
-                ou retrações na pele.</li>
+                ou retrações na pele.</span></li>
                 
-                <li><strong>No banho:</strong> Com as mãos ensaboadas, deslize os dedos suavemente sobre 
+                <li data-topic="autoexame-banho"><strong id="banho">No banho:</strong> <span id="banhoText">Com as mãos ensaboadas, deslize os dedos suavemente sobre 
                 toda a superfície das mamas e axilas, fazendo movimentos circulares. Procure por nódulos 
-                ou espessamentos.</li>
+                ou espessamentos.</span></li>
                 
-                <li><strong>Deitada:</strong> Coloque a mão direita atrás da cabeça e com a mão esquerda 
-                examine a mama direita, fazendo movimentos circulares. Repita o processo para a mama esquerda.</li>
+                <li data-topic="autoexame-deitada"><strong id="deitada">Deitada:</strong> <span id="deitadaText">Coloque a mão direita atrás da cabeça e com a mão esquerda 
+                examine a mama direita, fazendo movimentos circulares. Repita o processo para a mama esquerda.</span></li>
             </ul>
 
             <div class="destaque">
-                <p><strong>Atenção:</strong> Se você notar qualquer alteração, procure um médico imediatamente. 
-                Nem todas as alterações significam câncer, mas é importante investigar.</p>
+                <p><strong id="atencao">Atenção:</strong> <span id="atencaoText">Se você notar qualquer alteração, procure um médico imediatamente. 
+                Nem todas as alterações significam câncer, mas é importante investigar.</span></p>
             </div>
         </div>
 
         <div class="content-section">
-            <h2>Quando Procurar um Médico</h2>
-            <p>
-                Procure atendimento médico se você notar:
-            </p>
+            <h2 id="section4Title">Quando Procurar um Médico</h2>
+            <p id="section4Text">Procure atendimento médico se você notar:</p>
+            <p><em id="clickInfo4">Clique nos sintomas para compartilhar:</em></p>
             <ul>
-                <li>Nódulo ou caroço na mama ou axila</li>
-                <li>Alteração no tamanho ou forma da mama</li>
-                <li>Mudanças na textura da pele da mama</li>
-                <li>Vermelhidão ou descamação na mama</li>
-                <li>Secreção do mamilo</li>
-                <li>Alteração no mamilo (retração ou inversão)</li>
-                <li>Dor persistente na mama</li>
+                <li data-topic="nodulo" id="sintoma1">Nódulo ou caroço na mama ou axila</li>
+                <li data-topic="tamanho" id="sintoma2">Alteração no tamanho ou forma da mama</li>
+                <li data-topic="textura" id="sintoma3">Mudanças na textura da pele da mama</li>
+                <li data-topic="vermelhidao" id="sintoma4">Vermelhidão ou descamação na mama</li>
+                <li data-topic="secrecao" id="sintoma5">Secreção do mamilo</li>
+                <li data-topic="mamilo" id="sintoma6">Alteração no mamilo (retração ou inversão)</li>
+                <li data-topic="dor" id="sintoma7">Dor persistente na mama</li>
             </ul>
             
-            <p>
+            <p id="finalText">
                 Lembre-se: o diagnóstico precoce aumenta muito as chances de cura. Não tenha medo de 
                 procurar ajuda médica. Cuidar da saúde é um ato de amor próprio!
             </p>
         </div>
 
-        <div class="simbolo">
-            💗
-        </div>
+        <div class="simbolo">💗</div>
     </div>
 
     <footer>
-        <p><strong>Outubro Rosa - Prevenção Salva Vidas</strong></p>
-        <p>Compartilhe esta causa | Cuide-se | Faça seus exames</p>
-        <p>&copy; 2024 - Campanha de Conscientização</p>
+        <p><strong id="footerTitle">Outubro Rosa - Prevenção Salva Vidas</strong></p>
+        <p id="footerText">Compartilhe esta causa | Cuide-se | Faça seus exames</p>
+        <p id="footerCopy">&copy; 2024 - Campanha de Conscientização</p>
     </footer>
-</body>
-</html>
+
+    <script>
+        // IMPORTANTE: Substitua o número abaixo pelo número de WhatsApp desejado (com código do país)
+        const WHATSAPP_NUMBER = "5511999999999"; // Formato: código do país + DDD + número
+
+        const translations = {
+            pt: {
+                pageTitle: "Prevenção - Outubro Rosa",
+                headerTitle: "🎀 Outubro Rosa 🎀",
+                headerSubtitle: "Prevenir é cuidar da vida",
+                navHome: "Página Inicial",
+                navInfo: "Informações",
+                navPrev: "Prevenção",
+                heroTitle: "Prevenção e Diagnóstico Precoce",
+                heroText: "Pequenas atitudes podem salvar vidas",
+                section1Title: "Como Prevenir o Câncer de Mama",
+                section1Text: "Cerca de 30% dos casos de câncer de mama podem ser evitados com a adoção de hábitos saudáveis. A prevenção primária do câncer de mama está relacionada ao controle dos fatores de risco comportamentais.",
+                habitosTitle: "Hábitos Saudáveis:",
+                clickInfo: "Clique em qualquer item abaixo para compartilhar via WhatsApp:",
+                habito1: "Praticar atividade física regularmente",
+                habito2: "Manter o peso corporal adequado",
+                habito3: "Evitar o consumo de bebidas alcoólicas",
+                habito4: "Ter uma alimentação saudável",
+                habito5: "Amamentar (o aleitamento materno protege contra o câncer de mama)",
+                section2Title: "Exames de Detecção Precoce",
+                mamoTitle: "Mamografia",
+                mamoText: "A mamografia é o exame de rastreamento do câncer de mama mais recomendado. É um exame de imagem que utiliza raios-X para visualizar a mama internamente e detectar alterações suspeitas.",
+                recomendacoesTitle: "Recomendações:",
+                clickInfo2: "Clique para compartilhar:",
+                rec1: "Mulheres de 50 a 69 anos devem fazer mamografia a cada dois anos",
+                rec2: "Mulheres com risco elevado podem precisar começar antes",
+                rec3: "Consulte sempre seu médico para orientações personalizadas",
+                exameTitle: "Exame Clínico das Mamas",
+                exameText: "É o exame das mamas realizado por médico ou enfermeiro treinado. Nesse exame, são observados e apalpados as mamas e as axilas. Recomenda-se que seja feito anualmente a partir dos 40 anos.",
+                section3Title: "Autoconhecimento das Mamas",
+                section3Text: "O autoexame das mamas não substitui os exames de rotina (mamografia e exame clínico), mas é importante que toda mulher conheça bem o próprio corpo para identificar qualquer alteração suspeita.",
+                comoFazerTitle: "Como fazer o autoexame:",
+                clickInfo3: "Clique para saber mais:",
+                espelho: "No espelho:",
+                espelhoText: "De pé, observe suas mamas com os braços ao longo do corpo, depois com os braços levantados acima da cabeça. Procure alterações no contorno, inchaços ou retrações na pele.",
+                banho: "No banho:",
+                banhoText: "Com as mãos ensaboadas, deslize os dedos suavemente sobre toda a superfície das mamas e axilas, fazendo movimentos circulares. Procure por nódulos ou espessamentos.",
+                deitada: "Deitada:",
+                deitadaText: "Coloque a mão direita atrás da cabeça e com a mão esquerda examine a mama direita, fazendo movimentos circulares. Repita o processo para a mama esquerda.",
+                atencao: "Atenção:",
+                atencaoText: "Se você notar qualquer alteração, procure um médico imediatamente. Nem todas as alterações significam câncer, mas é importante investigar.",
+                section4Title: "Quando Procurar um Médico",
+                section4Text: "Procure atendimento médico se você notar:",
+                clickInfo4: "Clique nos sintomas para compartilhar:",
+                sintoma1: "Nódulo ou caroço na mama ou axila",
+                sintoma2: "Alteração no tamanho ou forma da mama",
+                sintoma3: "Mudanças na textura da pele da mama",
+                sintoma4: "Vermelhidão ou descamação na mama",
+                sintoma5: "Secreção do mamilo",
+                sintoma6: "Alteração no mamilo (retração ou inversão)",
+                sintoma7: "Dor persistente na mama",
+                finalText: "Lembre-se: o diagnóstico precoce aumenta muito as chances de cura. Não tenha medo de procurar ajuda médica. Cuidar da saúde é um ato de amor próprio!",
+                footerTitle: "Outubro Rosa - Prevenção Salva Vidas",
+                footerText: "Compartilhe esta causa | Cuide-se | Faça seus exames",
+                footerCopy: "© 2024 - Campanha de Conscientização",
+                
+                // Mensagens WhatsApp
+                whatsappMessages: {
+                    "atividade-fisica": "🎀 *Outubro Rosa* 🎀\n\n💪 *Prevenção do Câncer de Mama*\n\nPraticar atividade física regularmente é essencial! Exercícios ajudam a prevenir até 30% dos casos de câncer de mama.\n\n#OutubroRosa #PrevençãoSalvaVidas",
+                    "peso": "🎀 *Outubro Rosa* 🎀\n\n⚖️ *Prevenção do Câncer de Mama*\n\nManter o peso corporal adequado é fundamental! O sobrepeso após a menopausa aumenta o risco de câncer de mama.\n\n#OutubroRosa #CuideSeDeSi",
+                    "alcool": "🎀 *Outubro Rosa* 🎀\n\n🚫 *Prevenção do Câncer de Mama*\n\nEvitar o consumo de bebidas alcoólicas reduz significativamente o risco de desenvolver câncer de mama.\n\n#OutubroRosa #Prevenção",
+                    "alimentacao": "🎀 *Outubro Rosa* 🎀\n\n🥗 *Prevenção do Câncer de Mama*\n\nTer uma alimentação saudável, rica em frutas e vegetais, ajuda na prevenção do câncer de mama!\n\n#OutubroRosa #AlimentaçãoSaudável",
+                    "amamentacao": "🎀 *Outubro Rosa* 🎀\n\n🤱 *Prevenção do Câncer de Mama*\n\nAmamentar protege contra o câncer de mama! O aleitamento materno traz benefícios para mãe e bebê.\n\n#OutubroRosa #Amamentação",
+                    "mamografia-50-69": "🎀 *Outubro Rosa* 🎀\n\n🩺 *Exame de Mamografia*\n\nMulheres de 50 a 69 anos devem fazer mamografia a cada dois anos. O diagnóstico precoce salva vidas!\n\n#OutubroRosa #Mamografia",
+                    "risco-elevado": "🎀 *Outubro Rosa* 🎀\n\n⚠️ *Importante*\n\nMulheres com risco elevado podem precisar começar os exames antes dos 50 anos. Consulte seu médico!\n\n#OutubroRosa #Prevenção",
+                    "consulta-medico": "🎀 *Outubro Rosa* 🎀\n\n👨‍⚕️ *Orientação Médica*\n\nConsulte sempre seu médico para orientações personalizadas sobre prevenção e exames.\n\n#OutubroRosa #CuideMedico",
+                    "autoexame-espelho": "🎀 *Outubro Rosa* 🎀\n\n🪞 *Autoexame - No Espelho*\n\nDe pé, observe suas mamas com os braços ao longo do corpo e depois levantados. Procure alterações no contorno, inchaços ou retrações.\n\n#OutubroRosa #Autoexame",
+                    "autoexame-banho": "🎀 *Outubro Rosa* 🎀\n\n🚿 *Autoexame - No Banho*\n\nCom as mãos ensaboadas, deslize os dedos suavemente sobre as mamas e axilas em movimentos circulares. Procure por nódulos.\n\n#OutubroRosa #Autoexame",
+                    "autoexame-deitada": "🎀 *Outubro Rosa* 🎀\n\n🛏️ *Autoexame - Deitada*\n\nColoque uma mão atrás da cabeça e examine a mama com a outra mão em movimentos circulares. Repita do outro lado.\n\n#OutubroRosa #Autoexame",
+                    "nodulo": "🎀 *Outubro Rosa* 🎀\n\n⚠️ *Atenção aos Sintomas*\n\nNódulo ou caroço na mama ou axila? Procure um médico imediatamente! O diagnóstico precoce aumenta as chances de cura.\n\n#OutubroRosa #Prevenção",
+                    "tamanho": "🎀 *Outubro Rosa* 🎀\n\n⚠️ *Atenção aos Sintomas*\n\nAlteração no tamanho ou forma da mama? Não ignore! Consulte um médico.\n\n#OutubroRosa #DiagnósticoPrecoce",
+                    "textura": "🎀 *Outubro Rosa* 🎀\n\n⚠️ *Atenção aos Sintomas*\n\nMudanças na textura da pele da mama devem ser investigadas. Procure orientação médica!\n\n#OutubroRosa #Prevenção",
+                    "vermelhidao": "🎀 *Outubro Rosa* 🎀\n\n⚠️ *Atenção aos Sintomas*\n\nVermelhidão ou descamação na mama? Consulte um médico para avaliação.\n\n#OutubroRosa #Saúde",
+                    "secrecao": "🎀 *Outubro Rosa* 🎀\n\n⚠️ *Atenção aos Sintomas*\n\nSecreção do mamilo deve ser investigada. Não deixe para depois, procure um médico!\n\n#OutubroRosa #CuideDeVocê",
+                    "mamilo": "🎀 *Outubro Rosa* 🎀\n\n⚠️ *Atenção aos Sintomas*\n\nAlteração no mamilo (retração ou inversão)? Busque orientação médica imediatamente.\n\n#OutubroRosa #Prevenção",
+                    "dor": "🎀 *Outubro Rosa* 🎀\n\n⚠️ *Atenção aos Sintomas*\n\nDor persistente na mama deve ser avaliada por um profissional de saúde.\n\n#OutubroRosa #Saúde"
+                }
+            },
+            en: {
+                pageTitle: "Prevention - Pink October",
+                headerTitle: "🎀 Pink October 🎀",
+                headerSubtitle: "Preventing is caring for life",
+                navHome: "Home",
+                navInfo: "Information",
+                navPrev: "Prevention",
+                heroTitle: "Prevention and Early Diagnosis",
+                heroText: "Small actions can save lives",
+                section1Title: "How to Prevent Breast Cancer",
+                section1Text: "About 30% of breast cancer cases can be avoided by adopting healthy habits. Primary prevention of breast cancer is related to controlling behavioral risk factors.",
+                habitosTitle: "Healthy Habits:",
+                clickInfo: "Click on any item below to share via WhatsApp:",
+                habito1: "Practice physical activity regularly",
+                habito2: "Maintain adequate body weight",
+                habito3: "Avoid alcohol consumption",
+                habito4: "Have a healthy diet",
+                habito5: "Breastfeed (breastfeeding protects against breast cancer)",
+                section2Title: "Early Detection Exams",
+                mamoTitle: "Mammography",
+                mamoText: "Mammography is the most recommended breast cancer screening exam. It is an imaging exam that uses X-rays to visualize the breast internally and detect suspicious changes.",
+                recomendacoesTitle: "Recommendations:",
+                clickInfo2: "Click to share:",
+                rec1: "Women aged 50 to 69 should have a mammogram every two years",
+                rec2: "Women at high risk may need to start earlier",
+                rec3: "Always consult your doctor for personalized guidance",
+                exameTitle: "Clinical Breast Exam",
+                exameText: "It is the breast examination performed by a trained doctor or nurse. In this exam, the breasts and armpits are observed and palpated. It is recommended to be done annually from age 40.",
+                section3Title: "Breast Self-Awareness",
+                section3Text: "Breast self-examination does not replace routine exams (mammography and clinical exam), but it is important for every woman to know her own body well to identify any suspicious changes.",
+                comoFazerTitle: "How to do self-examination:",
+                clickInfo3: "Click to learn more:",
+                espelho: "In the mirror:",
+                espelhoText: "Standing, observe your breasts with your arms along your body, then with your arms raised above your head. Look for changes in contour, swelling or skin retractions.",
+                banho: "In the shower:",
+                banhoText: "With soapy hands, gently slide your fingers over the entire surface of the breasts and armpits, making circular movements. Look for lumps or thickening.",
+                deitada: "Lying down:",
+                deitadaText: "Place your right hand behind your head and examine your right breast with your left hand in circular movements. Repeat the process for the left breast.",
+                atencao: "Attention:",
+                atencaoText: "If you notice any changes, seek a doctor immediately. Not all changes mean cancer, but it is important to investigate.",
+                section4Title: "When to See a Doctor",
+                section4Text: "Seek medical attention if you notice:",
+                clickInfo4: "Click on symptoms to share:",
+                sintoma1: "Lump in the breast or armpit",
+                sintoma2: "Change in breast size or shape",
+                sintoma3: "Changes in breast skin texture",
+                sintoma4: "Redness or peeling on the breast",
+                sintoma5: "Nipple discharge",
+                sintoma6: "Nipple changes (retraction or inversion)",
+                sintoma7: "Persistent breast pain",
+                finalText: "Remember: early diagnosis greatly increases the chances of cure. Don't be afraid to seek medical help. Taking care of your health is an act of self-love!",
+                footerTitle: "Pink October - Prevention Saves Lives",
+                footerText: "Share this cause | Take care | Get your exams",
+                footerCopy: "© 2024 - Awareness Campaign",
+                
+                // WhatsApp Messages
+                whatsappMessages: {
+                    "atividade-fisica": "🎀 *Pink October* 🎀\n\n💪 *Breast Cancer Prevention*\n\nPracticing physical activity regularly is essential! Exercise helps prevent up to 30% of breast cancer cases.\n\n#PinkOctober #PreventionSavesLives",
+                    "peso": "🎀 *Pink October* 🎀\n\n⚖️ *Breast Cancer Prevention*\n\nMaintaining adequate body weight is fundamental! Overweight after menopause increases the risk of breast cancer.\n\n#PinkOctober #TakeCare",
+                    "alcool": "🎀 *Pink October* 🎀\n\n🚫 *Breast Cancer Prevention*\n\nAvoiding alcohol consumption significantly reduces the risk of developing breast cancer.\n\n#PinkOctober #Prevention",
+                    "alimentacao": "🎀 *Pink October* 🎀\n\n🥗 *Breast Cancer Prevention*\n\nHaving a healthy diet, rich in fruits and vegetables, helps prevent breast cancer!\n\n#PinkOctober #HealthyEating",
+                    "amamentacao": "🎀 *Pink October* 🎀\n\n🤱 *Breast Cancer Prevention*\n\nBreastfeeding protects against breast cancer! Breastfeeding brings benefits for mother and baby.\n\n#PinkOctober #Breastfeeding",
+                    "mamografia-50-69": "🎀 *Pink October* 🎀\n\n🩺 *Mammography Exam*\n\nWomen aged 50 to 69 should have a mammogram every two years. Early diagnosis saves lives!\n\n#PinkOctober #Mammography",
+                    "risco-elevado": "🎀 *Pink October* 🎀\n\n⚠️ *Important*\n\nWomen at high risk may need to start exams before age 50. Consult your doctor!\n\n#PinkOctober #Prevention",
+                    "consulta-medico": "🎀 *Pink October* 🎀\n\n👨‍⚕️ *Medical Guidance*\n\nAlways consult your doctor for personalized guidance on prevention and exams.\n\n#PinkOctober #MedicalCare",
+                    "autoexame-espelho": "🎀 *Pink October* 🎀\n\n🪞 *Self-Exam - In the Mirror*\n\nStanding, observe your breasts with arms along your body and then raised. Look for changes in contour, swelling or retractions.\n\n#PinkOctober #SelfExam",
+                    "autoexame-banho": "🎀 *Pink October* 🎀\n\n🚿 *Self-Exam - In the Shower*\n\nWith soapy hands, gently slide fingers over breasts and armpits in circular movements. Look for lumps.\n\n#PinkOctober #SelfExam",
+                    "autoexame-deitada": "🎀 *Pink October* 🎀\n\n🛏️ *Self-Exam - Lying Down*\n\nPlace one hand behind your head and examine the breast with the other hand in circular movements. Repeat on the other side.\n\n#PinkOctober #SelfExam",
+                    "nodulo": "🎀 *Pink October* 🎀\n\n⚠️ *Watch for Symptoms*\n\nLump in breast or armpit? See a doctor immediately! Early diagnosis increases chances of cure.\n\n#PinkOctober #Prevention",
+                    "tamanho": "🎀 *Pink October* 🎀\n\n⚠️ *Watch for Symptoms*\n\nChange in breast size or shape? Don't ignore it! Consult a doctor.\n\n#PinkOctober #EarlyDiagnosis",
+                    "textura": "🎀 *Pink October* 🎀\n\n⚠️ *Watch for Symptoms*\n\nChanges in breast skin texture should be investigated. Seek medical guidance!\n\n#PinkOctober #Prevention",
+                    "vermelhidao": "🎀 *Pink October* 🎀\n\n⚠️ *Watch for Symptoms*\n\nRedness or peeling on the breast? Consult a doctor for evaluation.\n\n#PinkOctober #Health",
+                    "secrecao": "🎀 *Pink October* 🎀\n\n⚠️ *Watch for Symptoms*\n\nNipple discharge should be investigated. Don't wait, see a doctor!\n\n#PinkOctober #TakeCare",
+                    "mamilo": "🎀 *Pink October* 🎀\n\n⚠️ *Watch for Symptoms*\n\nNipple changes (retraction or inversion)? Seek medical guidance immediately.\n\n#PinkOctober #Prevention",
+                    "dor": "🎀 *Pink October* 🎀\n\n⚠️ *Watch for Symptoms*\n\nPersistent breast pain should be evaluated by a healthcare professional.\n\n#PinkOctober #Health"
+                }
+            }
+        };
+
+        let currentLang = 'pt';
+
+        function apply
+
